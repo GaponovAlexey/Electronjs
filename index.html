@@ -13,32 +13,43 @@
   </head>
   <body>
     <main>
-      <h1 class="head" >Celsius to Fahrenheit</h1>
+      <h1 class="head">Celsius to Fahrenheit</h1>
 
       <div class="form-group col-md-3">
         <label for="usr">Celsius:</label>
-        <input type="text" class="form-control" id="celsius" onkeyup="Celsius()" />
+        <input
+          type="text"
+          class="form-control"
+          id="celsius"
+          onkeyup="Celsius()"
+        />
       </div>
       <div class="form-group col-md-3">
         <label for="pwd">Fahrenheit:</label>
-        <input type="text" class="form-control" id="fahrenheit" onkeyup="Fahrenheit()" />
+        <input
+          type="text"
+          class="form-control"
+          id="fahrenheit"
+          onkeyup="Fahrenheit()"
+        />
       </div>
     </main>
-    <!-- <script src="main.js"></script> -->
-    <script>
-      require("./render.js");
+    <main>
+      <script>
+        require("./render.js");
 
-      function Celsius() {
-        let celsius = document.getElementById("celsius").value;
-        let fat = (celsius * 9) / 5 + 32;
-        document.getElementById("fahrenheit").value = fat;
-      }
+        function Celsius() {
+          let celsius = document.getElementById("celsius").value;
+          let fat = (celsius * 9) / 5 + 32;
+          document.getElementById("fahrenheit").value = fat;
+        }
 
-      function Fahrenheit() {
-        let fahrenheit = document.getElementById("fahrenheit").value;
-        let celsius = ((fahrenheit - 32) * 5) / 9;
-        document.getElementById("celsius").value = celsius;
-      }
-    </script>
+        function Fahrenheit() {
+          let fahrenheit = document.getElementById("fahrenheit").value;
+          let celsius = ((fahrenheit - 32) * 5) / 9;
+          document.getElementById("celsius").value = celsius;
+        }
+      </script>
+    </main>
   </body>
 </html>

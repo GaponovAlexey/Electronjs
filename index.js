@@ -11,23 +11,21 @@ function createWindow() {
     icon: __dirname + "/img/favicon.jpg",
   });
 
-  win.loadURL(
-    url.format({
-      pathname: path.join(__dirname, "index.html"),
-      protocol: "file:",
-      slashes: true,
-    })
-  );
+  // win.loadURL(
+  //   url.format({
+  //     pathname: path.join(__dirname, "index.html"),
+  //     protocol: "file:",
+  //     slashes: true,
+  //   })
+  // );
+  win.loadFile("index.html")
   // win.webContents.openDevTools();
 
   win.on("close", () => {
     win = null;
   });
 
-  win.on("hi", () => {
-    win = console.log("hi")
-    
-  });
+ 
 }
 
 app.on("ready", createWindow);
