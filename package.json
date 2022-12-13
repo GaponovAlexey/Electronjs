@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "electron .",
-    "build": "electron-packager . electronApp --ignore=node_modules/electron-* && cp Icon.icns MyApp.app/Contents/Resources/atom.icns"
+    "build": "electron-packager . electronApp --ignore=node_modules/electron-* && cp Icon.icns MyApp.app/Contents/Resources/atom.icns --asar",
   },
   "keywords": [],
   "author": "",
